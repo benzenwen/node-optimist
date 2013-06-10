@@ -154,6 +154,17 @@ function Argv (args, cwd) {
         }
         return self;
     };
+
+    self.reset = function() {
+        flags = { bools : {}, strings : {} };
+        aliases = {};
+        demanded = {};
+        usage = '';
+        checks = [];
+        defaults = {};
+        descriptions = {};
+        wrap = null;
+    }
     
     self.parse = function (args_) {
         args = args_;
