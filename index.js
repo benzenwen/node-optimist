@@ -118,8 +118,9 @@ function Argv (args, cwd) {
     
     function fail (msg) {
         self.showHelp();
-        if (msg) console.error(msg);
-        process.exit(1);
+//        if (msg) console.error(msg);
+//        process.exit(1);
+        throw new Error (msg);
     }
     
     var checks = [];
